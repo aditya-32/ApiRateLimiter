@@ -1,4 +1,4 @@
-package org.example.rateLimiter;
+package org.example.rateLimiter.impl;
 
 import com.google.inject.Inject;
 import java.util.ArrayDeque;
@@ -8,10 +8,11 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.CollectionUtils;
 import org.example.entity.ApiRateLimitConfig;
 import org.example.entity.Request;
+import org.example.rateLimiter.ApiRateLimiter;
 
 @Slf4j
 @RequiredArgsConstructor(onConstructor = @__(@Inject))
-class SlidingWindowRateLimiter implements ApiRateLimiter{
+public class SlidingWindowRateLimiter implements ApiRateLimiter {
     private final Queue<Request> requestSequenceList = new ArrayDeque<>();
     private final ApiRateLimitConfig apiRateLimitConfig;
     @Override

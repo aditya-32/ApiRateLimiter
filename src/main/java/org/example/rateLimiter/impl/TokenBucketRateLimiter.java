@@ -1,4 +1,4 @@
-package org.example.rateLimiter;
+package org.example.rateLimiter.impl;
 
 import jakarta.inject.Inject;
 import java.time.Instant;
@@ -6,6 +6,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 import org.example.entity.ApiRateLimitConfig;
 import org.example.entity.Request;
+import org.example.rateLimiter.ApiRateLimiter;
 
 public class TokenBucketRateLimiter implements ApiRateLimiter {
     private final AtomicInteger currentCapacity;

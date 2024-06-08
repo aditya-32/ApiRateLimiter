@@ -2,6 +2,6 @@ package org.example.rateLimiter;
 
 import org.example.entity.Request;
 
-interface ApiRateLimiter {
+public interface ApiRateLimiter {
     boolean rateLimit(Request request);
 }

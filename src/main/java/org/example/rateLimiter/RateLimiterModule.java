@@ -5,6 +5,9 @@ import com.google.inject.multibindings.MapBinder;
 import lombok.RequiredArgsConstructor;
 import org.example.Enum.RateLimiterType;
 import org.example.entity.ApiRateLimitConfig;
+import org.example.rateLimiter.impl.SlidingWindowRateLimiter;
+import org.example.rateLimiter.impl.TokenBucketRateLimiter;
+
 import static com.google.inject.Scopes.SINGLETON;
 
 @RequiredArgsConstructor
